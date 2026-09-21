@@ -12,7 +12,10 @@ analytic laws and published experiments.
 
 
 
-https://github.com/user-attachments/assets/9b92c7e5-6927-4b28-af22-dfc4ba71eb87
+
+
+https://github.com/user-attachments/assets/f7a63c13-5d14-4afd-9643-c8697832b5b7
+
 
 *Production campaign. Blue is the invading fluid; the solid is cut open
 toward the camera.*
