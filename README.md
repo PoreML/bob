@@ -195,14 +195,6 @@ campaign protocol.
 100 % of its duration: the non-wetting phase enters from the inlet face and advances pore by
 pore.*
 
-The runs resolve the pore-scale events that make displacement intermittent. Below, a Haines
-jump in a fibre mat: between two saved frames (steps 1 120 000 and 1 140 000) the interface
-passes a throat and one pore body, highlighted in yellow, fills in a single burst.
-
-<p align="center">
-  <img src="assets/haines_jump.gif" width="70%"
-       alt="Animation of a Haines jump: a pore body fills in one burst">
-</p>
 
 ## Tests and code style
 
