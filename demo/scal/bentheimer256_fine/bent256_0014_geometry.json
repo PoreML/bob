@@ -1,0 +1,79 @@
+{
+  "source": "/data/geometry/data/bentheimer/256/bent256_0014.npy",
+  "geometry_type": "bentheimer (processed crop)",
+  "convention": "True = solid",
+  "shape": [
+    256,
+    256,
+    256
+  ],
+  "porosity": 0.24254,
+  "pore_components": 20,
+  "x_spanning_clusters": 1,
+  "connected_pore_fraction": 0.9972,
+  "sha256": "d1514cf0cdcb904b8176121f5679a6150c4778c83ee766b950d031e9305fec24",
+  "provenance": {
+    "source": "data/DRP-317 11 Sandstones/Bentheimer/Bentheimer_2d25um_binary.raw",
+    "voxel_size_um": 2.25,
+    "shape": [
+      256,
+      256,
+      256
+    ],
+    "origin": [
+      209,
+      376,
+      584
+    ],
+    "axis_permutation": [
+      2,
+      1,
+      0
+    ],
+    "flips": [
+      true,
+      false,
+      true
+    ],
+    "pre_opening_porosity": 0.26273,
+    "post_opening_porosity": 0.24347,
+    "closed_pore_voxels": 15624,
+    "post_fill_porosity": 0.24254,
+    "porosity_post": 0.24254,
+    "stats": {
+      "post_processing": {
+        "description": "ball(3) morphological opening of the pore space (closes throats with inscribed-sphere radius < 3 vox) + fill of face-disconnected dead pore pockets",
+        "opening_radius_vox": 3,
+        "closed_pore_voxels": 15624
+      },
+      "porosity": 0.24254,
+      "n_pores": 697,
+      "n_throats": 1214,
+      "throat_inscribed_radius_vox": {
+        "n": 1214,
+        "mean": 5.026,
+        "std": 2.473,
+        "min": 1.0,
+        "p10": 2.449,
+        "p25": 3.464,
+        "median": 4.583,
+        "p75": 6.083,
+        "p90": 8.124,
+        "max": 18.628
+      },
+      "pore_inscribed_radius_vox": {
+        "n": 697,
+        "mean": 5.525,
+        "std": 2.706,
+        "min": 1.0,
+        "p10": 3.0,
+        "p25": 3.742,
+        "median": 5.0,
+        "p75": 6.633,
+        "p90": 9.132,
+        "max": 20.248
+      },
+      "network_extraction": "porespy.networks.snow2 (boundary_width=0, voxel_size=1) on the post-processed geometry"
+    }
+  }
+}

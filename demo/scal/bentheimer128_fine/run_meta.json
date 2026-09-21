@@ -1,0 +1,103 @@
+{
+  "run": {
+    "start_time": "2026-07-29T17:51:41+00:00",
+    "end_time": "2026-07-30T01:29:28+00:00",
+    "status": "finished",
+    "argv": [
+      "case/scal/scal_demo.py",
+      "--out",
+      "case/scal/bentheimer128_fine",
+      "--name",
+      "scal_bent128_fine",
+      "--dpc",
+      "0.00035",
+      "--stall-n",
+      "8",
+      "--pre-blocks",
+      "5",
+      "--tol-ca",
+      "1e-5",
+      "--tol-eq",
+      "2e-4",
+      "--max-blocks",
+      "40",
+      "--frame-blocks",
+      "10",
+      "--gpus",
+      "4",
+      "--resume",
+      "case/scal/bentheimer128_fine"
+    ],
+    "cwd": "/data/solver",
+    "resume_step": 350000,
+    "notes": null
+  },
+  "solver": {
+    "omega": 1.6129032258064517,
+    "sigma": 0.05,
+    "beta": 0.7,
+    "omega2": 1.6129032258064517,
+    "gravity": null,
+    "mrt": true,
+    "s_bulk": null,
+    "s_ghost": null,
+    "mrt_chi": 0.8,
+    "theta": 135.0,
+    "wetting": "akai",
+    "csf": true,
+    "wall_grad": "fluid",
+    "recolor_csb_phi": false,
+    "recolor_emag": true,
+    "halfway": true,
+    "grad_order": [
+      2,
+      4
+    ],
+    "precision": "float32",
+    "lattice": "d3q19",
+    "bob_commit": "redacted"
+  },
+  "geometry": {
+    "shape": [
+      128,
+      128,
+      147
+    ],
+    "solid_fraction": 0.6658387476084183,
+    "porosity": 0.3341612523915817,
+    "sha256": "c30d966259031d09a67fe2d069c1746c107527e0e8ac499a6d1e954754389233",
+    "source": "test/assets/bentheimer128.npy"
+  },
+  "environment": {
+    "hostname": "node",
+    "platform": "Linux-5.15.0-152-generic-x86_64-with-glibc2.35",
+    "jax_version": "0.6.2",
+    "backend": "gpu",
+    "devices": [
+      "NVIDIA H100 80GB HBM3",
+      "NVIDIA H100 80GB HBM3",
+      "NVIDIA H100 80GB HBM3",
+      "NVIDIA H100 80GB HBM3"
+    ],
+    "n_devices": 4,
+    "cpu_count": 104
+  },
+  "progress": {
+    "step": 3850000,
+    "target_steps": null,
+    "fraction": null,
+    "steps_per_s": 127.42676443012981,
+    "elapsed_hours": 8.937050813154265,
+    "device_hours": 31.82601515051624,
+    "eta": null,
+    "updated_at": "2026-07-30T01:29:28+00:00"
+  },
+  "extra": {
+    "protocol": "SCAL pressure ladder",
+    "pc0": 0.00561,
+    "dpc": 0.00035,
+    "pc_cap": 0.02805,
+    "theta_plate": 170.0,
+    "plate": "2x2 holes pitch 4 thick 3"
+  }
+}

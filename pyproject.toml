@@ -1,0 +1,44 @@
+[project]
+name = "bob"
+version = "0.1.0"
+description = "GPU-accelerated two-phase color-gradient lattice-Boltzmann solver in JAX for multiphase flow in porous media"
+readme = "README.md"
+authors = [{ name = "PoreML authors" }]
+requires-python = ">=3.10"
+dependencies = [
+    "h5py>=3.16.0",
+    "jax>=0.6.2",
+]
+
+[project.optional-dependencies]
+# GPU support. JAX auto-detects hardware at runtime: with this plugin
+# installed it uses an available CUDA GPU and falls back to CPU otherwise.
+# Linux-only (no CUDA wheels for macOS); install with `uv sync --extra cuda`.
+cuda = [
+    "jax[cuda12]>=0.6.2; sys_platform == 'linux'",
+]
+
+[build-system]
+requires = ["uv_build>=0.9.0,<0.10.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+    "matplotlib>=3.8", # demo frame/plot rendering
+    "pillow>=10.0", # GIF assembly (bob.utils.viz)
+    "pyvista>=0.48.4",
+    "vtk<9.6",
+    "scikit-image>=0.24", # PMI morphological phase initializer (case/trapping/PMI.py)
+    "ruff==0.16.0",
+]
+
+[tool.ruff]
+line-length = 128
+
+[tool.ruff.lint.per-file-ignores]
+# Demos are operational scripts: best-effort guards around rendering/monitoring
+# (streamplot -> quiver fallback, PyVista SSAO enable, ...) intentionally catch
+# broadly so a cosmetic failure never kills a multi-hour SLURM run.
+"case/**" = ["BLE001", "S110"]
+"demo/**" = ["BLE001", "S110"]
