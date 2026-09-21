@@ -9,12 +9,12 @@ electronic packages. The solver is written as pure, jit-compiled JAX functions, 
 on CPU, on a single GPU, or sharded across the GPUs of a node, and is validated against
 analytic laws and published experiments.
 
-<p align="center">
-  <img src="assets/campaigns.png" width="100%"
-       alt="Four bob simulations: drainage in a porous medium, liquid water in a gas-diffusion layer, residual trapping, and flip-chip underfill">
-</p>
 
-*One frame from each production campaign. Blue is the invading fluid; the solid is cut open
+
+
+https://github.com/user-attachments/assets/9b92c7e5-6927-4b28-af22-dfc4ba71eb87
+
+*Production campaign. Blue is the invading fluid; the solid is cut open
 toward the camera.*
 
 ## Features
